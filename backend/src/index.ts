@@ -49,3 +49,5 @@ mongoose
   .catch((err) => {
     console.error('❌ Database Connection Error:', err);
   });
+  // මේක අනිවාර්යයෙන් අන්තිම පේළියට එකතු කරන්න
+export default app;
