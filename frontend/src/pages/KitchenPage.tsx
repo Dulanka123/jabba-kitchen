@@ -10,7 +10,7 @@ const KitchenPage = () => {
   // 1. Orders ගන්න Function එක (Sorting logic එක්ක)
   const fetchOrders = async () => {
     try {
-      const { data } = await axios.get<Order[]>('http://localhost:5000/api/orders');
+      const { data } = await axios.get<Order[]>('https://jabba-kitchen.vercel.app/api/orders');
       
       // Completed නැති ඒවා උඩට එන විදියට Sort කරනවා
       const sortedOrders = data.sort((a, b) => {
@@ -36,7 +36,7 @@ const KitchenPage = () => {
   // 2. Status Update කරන Function එක
   const updateStatus = async (id: string, status: 'Completed' | 'Pending') => {
     try {
-      await axios.put(`http://localhost:5000/api/orders/${id}`, { status });
+      await axios.put(`https://jabba-kitchen.vercel.app/api/orders/${id}`, { status });
       
       // Frontend එකේ ඉක්මනට වෙනස් වෙන්න State update කරනවා (Network delay නැතුව)
       setOrders(orders.map(o => o._id === id ? { ...o, status } : o));

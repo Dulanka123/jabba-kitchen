@@ -55,7 +55,7 @@ const CustomerPage = () => {
 
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get<Product[]>('http://localhost:5000/api/products');
+        const { data } = await axios.get<Product[]>('https://jabba-kitchen.vercel.app/api/products');
         if (Array.isArray(data)) {
           setProducts(data);
         } else {
@@ -149,7 +149,7 @@ const CustomerPage = () => {
     const loadingToast = toast.loading("Processing Order...");
 
     try {
-        await axios.post('http://localhost:5000/api/orders', {
+        await axios.post('https://jabba-kitchen.vercel.app/api/orders', {
             orderItems: cart.map(item => ({
                 name: item.product.name,
                 qty: item.qty,

@@ -20,7 +20,7 @@ const AdminReservationPage = () => {
   // Bookings Backend එකෙන් ගෙන්වා ගැනීම
   const fetchReservations = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/reservations');
+      const { data } = await axios.get('https://jabba-kitchen.vercel.app/api/reservations');
       setReservations(data);
     } catch (error) {
       console.error(error);
@@ -34,7 +34,7 @@ const AdminReservationPage = () => {
   // Status වෙනස් කිරීම (Confirm/Cancel)
   const updateStatus = async (id: string, status: string) => {
     try {
-      await axios.put(`http://localhost:5000/api/reservations/${id}`, { status });
+      await axios.put(`https://jabba-kitchen.vercel.app/api/reservations/${id}`, { status });
       fetchReservations(); // Data ආයේ refresh කරනවා
       alert(`Reservation ${status} Successfully!`);
     } catch (error) {

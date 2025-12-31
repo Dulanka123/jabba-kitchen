@@ -18,7 +18,7 @@ const AdminReviewsPage = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/feedback');
+        const { data } = await axios.get('https://jabba-kitchen.vercel.app/api/feedback');
         setReviews(data);
       } catch (error) {
         console.error(error);

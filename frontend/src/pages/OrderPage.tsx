@@ -28,7 +28,7 @@ const OrderPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get<Product[]>('http://localhost:5000/api/products');
+        const { data } = await axios.get<Product[]>('https://jabba-kitchen.vercel.app/api/products');
         setProducts(data);
       } catch (error) { console.error(error); }
     };
@@ -78,7 +78,7 @@ const OrderPage = () => {
       });
 
       // 2. Database එකට Save කරනවා
-      await axios.post('http://localhost:5000/api/orders', { 
+      await axios.post('https://jabba-kitchen.vercel.app/api/orders', { 
         orderItems, 
         totalPrice,
       });

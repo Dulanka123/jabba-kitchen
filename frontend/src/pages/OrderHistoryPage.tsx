@@ -33,7 +33,7 @@ const OrderHistoryPage = () => {
 
       try {
         // User ID එක යවලා එයාගේ Orders ගෙන්වා ගන්නවා
-        const { data } = await axios.get(`http://localhost:5000/api/orders/user/${user._id}`);
+        const { data } = await axios.get(`https://jabba-kitchen.vercel.app/api/orders/user/${user._id}`);
         setOrders(data);
       } catch (error) {
         console.error("Error fetching orders:", error);

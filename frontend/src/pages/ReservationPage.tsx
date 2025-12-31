@@ -22,7 +22,7 @@ const ReservationPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/reservations', formData);
+      await axios.post('https://jabba-kitchen.vercel.app/api/reservations', formData);
       alert('Table Reserved Successfully! We will contact you soon. 📅');
       navigate('/customer');
     } catch (error) {

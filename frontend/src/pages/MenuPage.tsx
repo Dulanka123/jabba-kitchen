@@ -42,7 +42,7 @@ const MenuPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/products');
+      const { data } = await axios.get('https://jabba-kitchen.vercel.app/api/products');
       setProducts(data);
     } catch (error) {
       toast.error("Failed to load products");
@@ -64,11 +64,11 @@ const MenuPage = () => {
     try {
       if (editingProduct) {
         // Edit Mode
-        await axios.put(`http://localhost:5000/api/products/${editingProduct._id}`, productData);
+        await axios.put(`https://jabba-kitchen.vercel.app/api/products/${editingProduct._id}`, productData);
         toast.success("Product Updated Successfully! 🔄");
       } else {
         // Add Mode
-        await axios.post('http://localhost:5000/api/products', productData);
+        await axios.post('https://jabba-kitchen.vercel.app/api/products', productData);
         toast.success("New Product Added! 🍔");
       }
       
@@ -83,7 +83,7 @@ const MenuPage = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/products/${id}`);
+        await axios.delete(`https://jabba-kitchen.vercel.app/api/products/${id}`);
         toast.success("Item Deleted!");
         fetchProducts();
       } catch (error) {

@@ -56,8 +56,8 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const ordersRes = await axios.get<Order[]>('http://localhost:5000/api/orders');
-        const productsRes = await axios.get('http://localhost:5000/api/products');
+        const ordersRes = await axios.get<Order[]>('https://jabba-kitchen.vercel.app/api/orders');
+        const productsRes = await axios.get('https://jabba-kitchen.vercel.app/api/products');
         
         const ordersData = ordersRes.data;
         setOrders(ordersData); // 👇 Orders ටික State එකට දැම්මා

@@ -14,7 +14,7 @@ const LoginPage = () => {
     
     try {
       // 1. Backend එකට Login Request එක යවනවා
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://jabba-kitchen.vercel.app/api/auth/login', { email, password });
       
       // 2. එන Data (Token & User Info) LocalStorage එකේ Save කරගන්නවා
       const userData = response.data;

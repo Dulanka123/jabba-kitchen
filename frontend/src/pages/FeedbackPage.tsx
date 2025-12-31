@@ -29,7 +29,7 @@ const FeedbackPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/feedback');
+      const { data } = await axios.get('https://jabba-kitchen.vercel.app/api/feedback');
       setReviews(data);
     } catch (error) { console.error(error); }
   };
@@ -39,7 +39,7 @@ const FeedbackPage = () => {
     if (rating === 0) return alert('Please select a star rating! ⭐');
     
     try {
-      await axios.post('http://localhost:5000/api/feedback', { name, rating, comment });
+      await axios.post('https://jabba-kitchen.vercel.app/api/feedback', { name, rating, comment });
       alert('Thank you for your review! ❤️');
       setComment('');
       setRating(0);

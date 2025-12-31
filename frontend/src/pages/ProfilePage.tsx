@@ -32,7 +32,7 @@ const ProfilePage = () => {
     
     try {
       // 2. අලුත් නම Backend එකට යවනවා
-      const { data } = await axios.put('http://localhost:5000/api/auth/profile', {
+      const { data } = await axios.put('https://jabba-kitchen.vercel.app/api/auth/profile', {
         _id: userId,
         name: name,
       });
