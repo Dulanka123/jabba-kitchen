@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-gray-100;
+    font-family: 'Outfit', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .glass-card {
+    @apply bg-zinc-900/60 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  .input-primary {
+    @apply w-full bg-zinc-800/50 border border-zinc-700 rounded-xl px-5 py-3 outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-linear-to-r from-yellow-500 to-orange-600 text-black font-bold py-3 px-6 rounded-xl transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+    transform: scale(1.02);
+  }
+
+  .btn-secondary {
+    @apply bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ... උඩින් තියෙන Tailwind කෑලි එහෙමම තියන්න ... */
+
+@media print {
+  /* Print කරද්දී Screen එකේ තියෙන හැමදේම හංගනවා */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Invoice එක විතරක් පෙන්නනවා */
+  #invoice-section, #invoice-section * {
+    visibility: visible;
+  }
+
+  /* Invoice එක හරියටම කොළේ මැදට ගන්නවා */
+  #invoice-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: block !important; /* hidden class එක තිබුනත් පෙන්නනවා */
+    background-color: white;
+  }
+}
