@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# 🍔 Jabba's Kitchen - Smart Restaurant POS System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Jabba's Kitchen** is a comprehensive Full Stack Web Application designed to modernize restaurant operations. Built using the **MERN Stack (MongoDB, Express.js, React, Node.js)** with **TypeScript**, this system facilitates seamless food ordering for customers and robust management tools for administrators.
 
-## React Compiler
+The project follows **Rapid Application Development (RAD)** principles, ensuring a user-centered design, iterative improvements, and high responsiveness across all devices (Mobile & Desktop).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔗 Live Deployment Links (System Links)
 
-## Expanding the ESLint configuration
+🔴 **Frontend (Customer Site):** https://jabba-kitchen-frontend.vercel.app
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🟢 **Backend (API):** https://jabba-kitchen.vercel.app
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Key Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 👤 Customer Features
+- **Interactive Menu:** Browse food items with categories and real-time availability.
+- **Shopping Cart:** Add items, adjust quantities, and view total costs instantly.
+- **User Authentication:** Secure Sign-up and Login using JWT.
+- **Responsive Design:** Optimized for mobile phones and tablets (PWA Support).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 👑 Admin Dashboard
+- **Stock Management:** Real-time tracking of ingredients and food availability.
+- **Analytics & Charts:** Visual representation of sales, popular items, and revenue.
+- **Product Management:** Add, update, or delete menu items with image support.
+- **Order Management:** View and process incoming customer orders.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
+
+This project is built entirely using **TypeScript** for type safety and maintainability.
+
+| Category | Technologies Used |
+|----------|-------------------|
+| **Frontend** | React.js, Vite, TypeScript, Tailwind CSS, Redux Toolkit |
+| **Backend** | Node.js, Express.js, TypeScript |
+| **Database** | MongoDB Atlas (Cloud) |
+| **Authentication** | JWT (JSON Web Tokens), bcryptjs |
+| **Deployment** | Vercel (Frontend & Backend) |
+
+---
+
+## ⚙️ Installation & Setup Guide
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/Dulanka123/jabba-kitchen.git](https://github.com/Dulanka123/jabba-kitchen.git)
+cd jabba-kitchen
+2. Backend Setup
+Bash
+
+cd backend
+npm install
+# Create a .env file with PORT and MONGO_URI
+npm start
+3. Frontend Setup
+Open a new terminal:
+
+Bash
+
+cd frontend
+npm install
+npm run dev
+🧪 Testing Credentials
+To test the system, use the following Admin credentials:
+
+Admin Email: admin@jabba.com
+
+Password: 123456
+
+(Note: New users can sign up as customers via the registration page)
+
+👨‍💻 Student Details
+Name: Dulanka Gayan Weerathunga
+
+Course: Graduate Diploma in Software Engineering
+
+Module: ITS2020 - Rapid Application Development (RAD)
+
+Project: Individual Coursework
